@@ -80,6 +80,9 @@ Current limitations include:
 * Some MCP integrations are implemented as infrastructure components and are ready for future workflow integration rather than being automatically used in every chat request.
 * Embedding and reranking models are downloaded once from Hugging Face during first execution and then cached locally.
 
+  <img width="800" height="444" alt="project_demo-ezgif com-gif-to-mp4-converter" src="https://github.com/user-attachments/assets/13099c0a-1f74-483e-b5e7-340eece549a4" />
+
+
 
 <img width="1702" height="828" alt="Screenshot 2026-07-07 152358" src="https://github.com/user-attachments/assets/9087f62b-e7ee-40e7-b043-97518417f463" />
 
