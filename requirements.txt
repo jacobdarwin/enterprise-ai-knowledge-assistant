@@ -1,21 +1,27 @@
 # ============================================================
-# Enterprise RAG — requirements.txt
-# All packages chosen to run on CPU (no CUDA-only wheels required).
-# Torch is installed CPU-only in Dockerfile / setup script.
+# Enterprise AI Knowledge Assistant (RAG)
+# Production Requirements
 # ============================================================
 
-# --- Web framework ---
+# -----------------------------
+# Web Framework
+# -----------------------------
 fastapi==0.115.6
 uvicorn[standard]==0.34.0
 pydantic==2.10.4
 pydantic-settings==2.7.1
 python-multipart==0.0.20
-slowapi==0.1.9                 # rate limiting
+slowapi==0.1.9
 
-# --- Frontend ---
+# -----------------------------
+# Frontend
+# -----------------------------
 streamlit==1.41.1
 
-# --- AI orchestration ---
+# -----------------------------
+# LangChain Ecosystem
+# -----------------------------
+langchain-core==0.3.29
 langchain==0.3.14
 langchain-community==0.3.14
 langchain-groq==0.2.3
@@ -25,42 +31,58 @@ langchain-anthropic==0.3.3
 langgraph==0.2.62
 langsmith==0.2.10
 
-# --- Embeddings (CPU) ---
+# -----------------------------
+# Embeddings
+# -----------------------------
 sentence-transformers==3.3.1
 
-# --- Vector store ---
+# -----------------------------
+# Vector Database
+# -----------------------------
 chromadb==0.5.23
 
-# --- Hybrid search / reranking ---
+# -----------------------------
+# Retrieval
+# -----------------------------
 rank-bm25==0.2.2
-# CrossEncoder reranker ships inside sentence-transformers already
 
-# --- Document parsing ---
+# -----------------------------
+# Document Processing
+# -----------------------------
 pypdf==5.1.0
 python-docx==1.1.2
 unstructured==0.16.11
 markdown==3.7
 
-# --- Database ---
+# -----------------------------
+# Database
+# -----------------------------
 sqlalchemy==2.0.36
 aiosqlite==0.20.0
 alembic==1.14.0
 
-# --- MCP ---
+# -----------------------------
+# Model Context Protocol (MCP)
+# -----------------------------
 mcp==1.1.2
 
-# --- Utilities ---
+# -----------------------------
+# Utilities
+# -----------------------------
 python-dotenv==1.0.1
 structlog==24.4.0
 tenacity==9.0.0
 httpx==0.28.1
 
-# --- Testing ---
+# -----------------------------
+# Testing
+# -----------------------------
 pytest==8.3.4
 pytest-asyncio==0.25.1
 pytest-cov==6.0.0
-httpx==0.28.1
 
-# --- Dev tooling ---
+# -----------------------------
+# Code Quality
+# -----------------------------
 black==24.10.0
 ruff==0.8.4
