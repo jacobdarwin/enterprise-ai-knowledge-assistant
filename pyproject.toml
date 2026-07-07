@@ -1,0 +1,12 @@
+[tool.black]
+line-length = 115
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 115
+target-version = "py312"
+exclude = ["frontend/pages", "frontend/app.py"]  # Streamlit scripts use top-level statements freely
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]  # line length enforced by black instead
